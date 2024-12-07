@@ -11,17 +11,20 @@ socket.on("connect", () => {
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    update(); 
-}
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
+ 
+
+
 
 const img = new Image();
 img.src = "/img/fatcat.png";
 img.onload = function () {
     update();
 };
+
+
+
 let movement = { x: 0, y: 0,};
 let x = 0;
 let y = 0;
@@ -30,7 +33,6 @@ let vxr = 0;
 let vy = 0;
 let grounded = false;
 let gameOver = false;
-
 let otherPlayers = {};
 
 
