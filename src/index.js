@@ -91,13 +91,10 @@ function update(){
     ctx.drawImage(img, x, y, 300, 300);
     collision()
     updateMovement();
-    socket.emit("playerMove", movement);
-
     drawOtherPlayers();
-
     requestAnimationFrame(update)
     collision()
-    resizeCanvas()
+    socket.emit("playerMove", movement);
 }
 
 update()
