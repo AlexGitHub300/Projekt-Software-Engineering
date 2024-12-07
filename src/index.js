@@ -1,4 +1,4 @@
-const socket = io("https://projekt-software-engineering-production.up.railway.app/");
+const socket = io("https://projekt-software-engineering-production.up.railway.app");
 
 
 socket.on("connect", () => {
@@ -6,19 +6,23 @@ socket.on("connect", () => {
 });
 
 
-
+const VIRTUAL_WIDTH = 1920;
+const VIRTUAL_HEIGHT = 1080;
 
 //define movment, gravity and colison for fatcat
+
+
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight; 
+}
 
 const img = new Image();
 img.src = "/img/fatcat.png";
 img.onload = function () {
-    update();
 };
 let movement = { x: 0, y: 0,};
 let x = 0;
@@ -93,7 +97,7 @@ function update(){
 
     requestAnimationFrame(update)
     collision()
-
+    resizeCanvas()
 }
 
 update()
