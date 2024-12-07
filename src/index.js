@@ -10,19 +10,19 @@ const VIRTUAL_WIDTH = 1920;
 const VIRTUAL_HEIGHT = 1080;
 
 //define movment, gravity and colison for fatcat
-
-
 const canvas = document.getElementById("canvas")
 const ctx = canvas.getContext("2d")
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight; 
+    canvas.height = window.innerHeight;
+    update(); 
 }
 
 const img = new Image();
 img.src = "/img/fatcat.png";
 img.onload = function () {
+    update();
 };
 let movement = { x: 0, y: 0,};
 let x = 0;
