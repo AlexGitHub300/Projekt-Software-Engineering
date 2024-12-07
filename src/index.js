@@ -6,8 +6,6 @@ socket.on("connect", () => {
 });
 
 
-const VIRTUAL_WIDTH = 1920;
-const VIRTUAL_HEIGHT = 1080;
 
 //define movment, gravity and colison for fatcat
 const canvas = document.getElementById("canvas")
