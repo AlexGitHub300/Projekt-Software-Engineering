@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    
+    height: 100%; 
+    font-family: Arial, sans-serif;
+}
+
+
+
+.gameContainer{
+background-image: url(../img/nightforest.png);
+background-repeat: repeat-x;
+background-size: 100% 100%;
+width: 100%;
+height: 100vh;
+position: relative;
+overflow: hidden;
+}
+
+.obstacle{
+    width: 250px;
+    height: 250px;
+    background-image: url(../img/muffin.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    animation: moveObstacle var(--spawn-speed, 5s) linear infinite;
+}
+
+.obstacle2{
+    width: 250px;
+    height: 250px;
+    background-image: url(../img/muffin.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    animation: moveObstacle var(--spawn-speed, 8s) linear infinite;
+}
+
+
+
+/* Für die Katze*/
+canvas {
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 10; 
+    pointer-events: none; 
+}
+
+
+@keyframes scrollBackground {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -100vw 0;
+    }
+}
+@keyframes moveObstacle {
+    from {
+        left: 100vw; 
+    }
+    to {
+        left: -350px; 
+    }
+}
+
+@keyframes moveObstacle2 {
+    from {
+        left: 100vw; 
+    }
+    to {
+        left: -350px; 
+    }
+}
+
+
+
+.questionBox {
+    position: fixed;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    z-index: 1000;
+    text-align: center;
+}
+
+
+.menu2 {
+    display: none;
+}
+
+.menu {
+    display: block;  
+    padding: 20px;
+}
+
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+.card h3 {
+    margin: 0;
+}
+.card p {
+    margin: 5px 0 0 0;
+}
+#cardsContainer {
+    margin-top: 20px;
+}
+
+
+ 
+#playButton{
+    background-image: url(../img/yesbutton.png);
+    background-size: cover; 
+    position: fixed;
+    border: none; 
+    top: 45%; 
+    left: 45%;
+    width: 400px; 
+    height: 400px; 
+    padding: 0;
+    background-color: white;
+}
+
+#playButton.playing {
+    background-image: url(../img/kekw.png); 
+    background-size: cover;
+    padding: 0;
+    border: none;
+    background-color: white;
+}
+
+.text{
+    position: fixed;
+    background-color: #4ca0af; 
+    color: white; 
+    padding: 20px; 
+    border-radius: 50px; 
+    max-width: 40%; 
+    top: 10%;
+    left: 37%;
+    font-size: 18px; 
+    line-height: 1.5; 
+    text-align: center; 
+    word-wrap: break-word; 
+    font-family: Arial, sans-serif;
+}
+
+.weiter{
+    font-size:25px;
+    padding: 20px;
+    font: white;
+    border-radius: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.scoreBox{
+    margin-top: 20px;
+    font-size:20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+.totalScoreBox{
+    margin-top: 20px;
+    font-size:20px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: white;
+}
+button {
+    background-color: #4CAF50;  
+    color: white;  
+    border: none;  
+    padding: 10px 20px;  
+    text-align: center;  
+    text-decoration: none;  
+    font-size: 16px;  
+    margin: 5px;  
+    cursor: pointer;  
+    border-radius: 8px;  
+    transition: background-color 0.3s ease, transform 0.2s ease;  
+}
+
+
+button:hover {
+    background-color: #45a049;  
+    transform: scale(1.1);  
+}
+
+
+button.gut {
+    background-color: #4CAF50;  
+}
+
+button.gut:hover {
+    background-color: #45a049;  
+}
+
+input[type="file"] {
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 8px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; 
+    width: auto; 
+}
+
+
+input[type="file"]:hover {
+    background-color: #45a049; 
+    transform: scale(1.05); 
+}
+
+
+input[type="file"]:focus {
+    outline: none; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.8); 
+}

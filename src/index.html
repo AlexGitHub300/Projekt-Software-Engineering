@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+
+
+</head>
+
+<body>
+
+    <div id="page1" class="menu">
+    <div class="text"> Die Katze wollte eigentlich nachts nur entspannt 
+        im Wald spazieren gehen, doch plötzlich wird sie von Muffins angegriffen!
+        Helft der Katz über die Muffins zu hüpfen, 
+        bevor sie vor lauter Muffins nicht mehr laufen kann!
+    </div>
+        <h1>Karten Erstellen</h1>
+        <form id="cardForm">
+            <label for="question">Frage:</label><br>
+            <input type="text" id="question" required><br><br>
+            <label for="answer">Antwort:</label><br>
+            <input type="text" id="answer" required><br><br>
+            <button type="submit">Karte hinzufügen</button>
+        </form>
+
+
+
+        <input id="roomInput" type="text"  />
+        <button id="joinRoomButton">Lobby betreten/erstellen</button>
+        
+        <h2>Aktionen</h2>
+        <button id="downloadCards">Karten Herunterladen</button>
+        <input type="file" id="uploadCards" accept=".json">
+        <h2>Erstellte Karten</h2>
+        <div id="cardsContainer"></div>
+        <button id="playButton"></button>
+    </div>
+
+  
+
+
+    <div id="page2" class="menu2">
+        <div class="gameContainer">
+            
+            
+            <button type="button" onclick="location.href='https://projekt-software-engineering-production.up.railway.app/'">Menü</button>
+            <div id="questionBox" class="questionBox"></div>
+            <div id="scoreBox" class="scoreBox">Punkte: 0</div>
+            <div id="totalScoreBox" class="totalScoreBox">Punkte: 0</div>
+            <div class="obstacle"></div>
+            <div class="obstacle1"></div>
+            <div class="obstacle2"></div>
+          
+            <canvas id="canvas" width="100vh" height="100vh"></canvas>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.socket.io/4.5.1/socket.io.min.js"></script>
+    <script src="Karten.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="module" src="/index.js"></script>
+</body>
+
+</html>
