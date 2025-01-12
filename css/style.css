@@ -156,8 +156,9 @@ canvas {
     padding: 20px; 
     border-radius: 50px; 
     max-width: 40%; 
-    top: 10%;
-    left: 37%;
+    top: 5%;
+    left: 40%;
+    right: 20%;
     font-size: 18px; 
     line-height: 1.5; 
     text-align: center; 

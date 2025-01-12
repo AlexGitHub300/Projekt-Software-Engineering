@@ -15,12 +15,25 @@
 <body>
 
     <div id="page1" class="menu">
-    <div class="text"> Die Katze wollte eigentlich nachts nur entspannt 
-        im Wald spazieren gehen, doch plötzlich wird sie von Muffins angegriffen!
-        Helft der Katz über die Muffins zu hüpfen, 
-        bevor sie vor lauter Muffins nicht mehr laufen kann!
+    <div class="text">     
+        Hier kannst du Fragen für dein Fragenkatalog erstellen.
+        <br><br>
+        Um eine eigene Lobby zu betreten wähle eine Zahl aus. 
+        <br><br>
+        (Beachte: Jeder der die selbe Zahl eingibt kann deiner Lobby beitreten. Wenn du alleine lernen möchtest, solltest du eine unwahrscheinliche Zahlkombination eingeben.)
+        <br><br>
+        Um dein Deck in die Datenbank hochzuladen, klicke zunächst auf den Button "Karten herunterladen", um die Datei zu erstellen. 
+        Logge dich anschließend in die Datenbank ein, wähle im Bereich "Datei auswählen" die heruntergeladene Datei aus deinem Download-Ordner aus und lade sie hoch.
+        <br><br>
+        Tastenbelegung:<br>
+        <ul>
+            <li>A: Links</li>
+            <li>D: Rechts</li>
+            <li>Leertaste: Springen</li>
+        </ul>
     </div>
-        <h1>Karten Erstellen</h1>
+        <h1>Dein Fragenkatalog</h1>
+        <h2>Karten Erstellen</h2>
         <form id="cardForm">
             <label for="question">Frage:</label><br>
             <input type="text" id="question" required><br><br>
@@ -33,13 +46,12 @@
 
         <input id="roomInput" type="text"  />
         <button id="joinRoomButton">Lobby betreten/erstellen</button>
-        
-        <h2>Aktionen</h2>
+
+         <h2>Aktionen</h2> <button type="button" onclick="location.href='https://quiz-datenbank.web.app/'">Alle Fragenkataloge anzeigen</button>
         <button id="downloadCards">Karten Herunterladen</button>
         <input type="file" id="uploadCards" accept=".json">
         <h2>Erstellte Karten</h2>
         <div id="cardsContainer"></div>
-        <button id="playButton"></button>
     </div>
 
   
@@ -48,13 +60,11 @@
     <div id="page2" class="menu2">
         <div class="gameContainer">
             
-            
             <button type="button" onclick="location.href='https://projekt-software-engineering-production.up.railway.app/'">Menü</button>
             <div id="questionBox" class="questionBox"></div>
             <div id="scoreBox" class="scoreBox">Punkte: 0</div>
             <div id="totalScoreBox" class="totalScoreBox">Punkte: 0</div>
             <div class="obstacle"></div>
-            <div class="obstacle1"></div>
             <div class="obstacle2"></div>
           
             <canvas id="canvas" width="100vh" height="100vh"></canvas>
