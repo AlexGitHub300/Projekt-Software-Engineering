@@ -1,5 +1,5 @@
 //Verbindet Client mit dem Server
-const socket = io("http://localhost:5000");
+const socket = io("projekt-software-engineering-production.up.railway.app");
 
 // Zum überprüen der Verbindung mit dem Server
 socket.on("connect", () => {
